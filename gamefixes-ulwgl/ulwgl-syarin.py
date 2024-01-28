@@ -5,7 +5,7 @@
 from protonfixes import util
 
 def main():
-    """ installs cjkfonts, d3dx9, dirac, dotnet35, dotnet40, lavfilters, vcrun2005, vcrun2008
+    """ Installs cjkfonts, d3dx9, dirac, dotnet35, dotnet40, lavfilters, vcrun2005, vcrun2008
     """
 
     util.protontricks('cjkfonts')
@@ -16,11 +16,28 @@ def main():
     util.protontricks('lavfilters')
     util.protontricks('vcrun2005')
     util.protontricks('vcrun2008')
-    util.regedit_add('HKEY_CURRENT_USER\Software\Wine\X11 Driver', 'Decorated', 'REG_SZ', 'N') # use 'windowmanagerdecorated=n' instead?
-    util.regedit_add('HKEY_CURRENT_USER\Software\Wine\X11 Driver', 'Managed', 'REG_SZ', 'N') # use 'windowmanagerdecorated=n' instead? 
-    util.regedit_add('HKEY_CURRENT_USER\Software\Wine\Direct3D', 'renderer', 'REG_SZ', 'gdi') # use 'winetricks renderer=gdi' instead?
+
+    """ Changes renderer to GDI
+    """
+
+    util.protontricks('renderer=gdi')
+
+
+    """ Prevent the window manager from decorating and controlling windows
+    """
+
+    util.protontricks('windowmanagerdecorated=n')
+    util.protontricks('windowmanagermanaged=n')
+
+    """ Sets Japanese locale and change time zone
+    """
+
     util.set_environment('LC_ALL', 'ja_JP.UTF-8')
     util.set_environment('TZ', 'Asia/Tokyo')
+
+    """ Disables NvAPI, DXVK, Esync, Fsync and protonaudioconverter
+    """
+
     util.disable_nvapi()
     util.disable_dxvk()
     util.disable_esync()
