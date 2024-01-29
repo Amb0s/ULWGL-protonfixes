@@ -5,10 +5,14 @@
 from protonfixes import util
 
 def main():
-    """ installs d3dcompiler_47
+    """ Installs d3dcompiler_47
     """
 
     util.protontricks('d3dcompiler_47')
+
+    """ Disables NvAPI, DXVK, Esync, Fsync and protonaudioconverter
+    """
+
     util.disable_nvapi()
     util.disable_dxvk()
     util.disable_esync()
