@@ -23,7 +23,7 @@ def main():
     util.protontricks('renderer=gdi')
 
 
-    """ Prevent the window manager from decorating and controlling windows
+    """ Prevents the window manager from decorating and controlling windows
     """
 
     util.protontricks('windowmanagerdecorated=n')
