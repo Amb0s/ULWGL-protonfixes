@@ -22,7 +22,6 @@ def main():
 
     util.protontricks('renderer=gdi')
 
-
     """ Sets Japanese locale and change time zone
     """
 
