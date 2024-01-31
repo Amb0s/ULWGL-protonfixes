@@ -1,4 +1,4 @@
-""" Game fix for Discipline
+""" Game fix for Discipline -The Record of a Crusade-
 """
 #pylint: disable=C0103
 
