@@ -11,6 +11,11 @@ def main():
     util.protontricks('directmusic')
     util.protontricks('gmdls')
 
+    """ Fixes audio crackling
+    """
+
+    util.set_environment('PULSE_LATENCY_MSEC', '60')
+
     # Optional: install `timidity` and a soundfont to enable in-game MIDI support.
 
     """ Prevent the window manager from decorating and controlling windows
