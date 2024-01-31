@@ -13,6 +13,11 @@ def main():
 
     # Optional: install `timidity` and a soundfont to enable in-game MIDI support.
 
+    """ Fixes audio crackling
+    """
+
+    util.set_environment('PULSE_LATENCY_MSEC', '60')
+
     """ Prevent the window manager from decorating and controlling windows
     """
 
