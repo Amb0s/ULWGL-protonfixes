@@ -13,6 +13,12 @@ def main():
     util.protontricks('lavfilters')
     util.protontricks('vcrun2005')
     util.protontricks('vcrun2008')
+    
+    """ Prevent the window manager from decorating and controlling windows
+    """
+
+    util.protontricks('windowmanagerdecorated=n')
+    util.protontricks('windowmanagermanaged=n')
 
     """ Disables NvAPI, DXVK, Esync, Fsync and protonaudioconverter
     """
