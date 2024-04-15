@@ -1,4 +1,5 @@
 """ Game fix for Saya no Uta ~ The Song of Saya
+    Note: this is a fix for the original English version (https://vndb.org/r26763) and not for the remastered one (https://vndb.org/r65398)
 """
 #pylint: disable=C0103
 
